@@ -21,9 +21,61 @@
             </a>
         </nav>
     </header>
+
     <main class="container">
+        <div class="row">
+            <div class="col mt-5">
+                <form class="d-flex" onsubmit="app.CarsController.makeCar()">
+                    <div class="form-group">
+                        <label for="make">Make:</label>
+                        <input type="text" id="make" name="make" class="form-control" placeholder="Make" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model:</label>
+                        <input type="text" id="model" name="model" class="form-control" placeholder="Model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year:</label>
+                        <input type="number" id="year" name="year" class="form-control" placeholder="Year" required
+                            min="1900" max="2021">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" class="form-control" placeholder="Price" required
+                            min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" name="description" class="form-control"
+                            placeholder="Description">
+                    </div>
+                    <div class="form-group">
+                        <label for="imgUrl">Image URL:</label>
+                        <input type="text" id="imgUrl" name="imgUrl" class="form-control" placeholder="URL">
+                    </div>
+                    <button type="submit" class="btn btn-info m-2">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-2 my-3">
+            <div class="bg-light shadow">
+                <img src="//placehold.it/100x100" class="w-100" alt="car">
+                <div class="p-3">
+                    <div class="text-center">
+                        <p><b>YEAR - MAKE - MODEL</b></p>
+                    </div>
+                    <p>DESCRIPTION</p>
+                    <p><em>PRICE</em></p>
+                </div>
+            </div>
+
+        </div>
         <div id="app"></div>
+
     </main>
+
+
+
     <footer class="bg-dark text-light">
         <div class="text-center">
             <p><small>Made with love by Codeworks</small></p>
