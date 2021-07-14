@@ -3,7 +3,7 @@ import Car from "../Models/Car.js"
 
 
 class CarsService {
-  createCar(newCar) {
+  makeCar(newCar) {
     ProxyState.cars = [...ProxyState.cars, new Car(newCar)]
   }
 }

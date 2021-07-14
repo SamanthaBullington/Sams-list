@@ -5,7 +5,7 @@ export default class Car {
     this.year = year
     this.price = price
     this.description = description || "No car description given"
-    this.imgURL = imgURL || 'placehold.it/2000x200'
+    this.imgURL = imgURL || 'placehold.it/100x100'
 
   }
 

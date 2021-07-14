@@ -3,32 +3,31 @@ import { carsService } from "../Services/CarsService.js"
 
 function _draw() {
   let template = ''
-  ProxyState.cars.forEach(car => {
-    template += car.Template
+  ProxyState.jobs.forEach(job => {
+    template += job.Template
   })
-  // document.getElementById('cars').innerHTML = template
+  // document.getElementById('jobs').innerHTML = template
 }
 
-export default class CarsController {
+export default class JobsController {
   constructor() {
 
-    ProxyState.on('cars', _draw)
-    ProxyState.on('cars', () => { console.log('new car') })
+    ProxyState.on('jobs', _draw)
+    ProxyState.on('jobs', () => { console.log('new job') })
     _draw()
   }
 
-  makeCar() {
+  makeJob() {
     event.preventDefault()
     let form = event.target
-    let newCar = {
-      make: form.make.value,
-      model: form.model.value,
-      year: form.year.value,
-      price: form.price.value,
+    let newJob = {
+      position: form.position.value,
+      location: form.location.value,
+      pay: form.pay.value,
       description: form.description.value,
       imgUrl: form.imgUrl.value
     }
-    carsService.makeCar(newCar)
+    jobsService.makeJob(newJob)
     form.reset()
   }
 }

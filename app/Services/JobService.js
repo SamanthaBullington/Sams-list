@@ -3,8 +3,8 @@ import Job from "../Models/Job.js"
 
 
 class JobService {
-  createJob(newCar) {
-    ProxyState.jobs = [...ProxyState.cars, new Job(newJob)]
+  makeJob(newJob) {
+    ProxyState.jobs = [...ProxyState.jobs, new Job(newJob)]
   }
 }
 

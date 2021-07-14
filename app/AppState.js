@@ -17,8 +17,8 @@ class AppState extends EventEmitter {
       description: 'This Car is HOT!',
       imgUrl: 'https://blog.automedicsafrica.com/wp-content/uploads/2015/08/Impala-vs-Pinto-750x547.jpg'
     }),]
-  // houses = []
-  // jobs = []
+  houses = []
+  jobs = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

@@ -3,9 +3,9 @@ import House from "../Models/House.js"
 
 
 class HouseService {
-  createHouse(newHouse) {
+  makeHouse(newHouse) {
     ProxyState.house = [...ProxyState.house, new House(newHouse)]
   }
 }
 
-export const carsService = new HouseService()
+export const houseService = new HouseService()
