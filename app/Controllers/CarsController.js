@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js"
-import { carsService } from "../Services/CarsService.js"
+import { houseService } from "../Services/HouseService.js"
 
 function _draw() {
   let template = ''
@@ -12,23 +12,23 @@ function _draw() {
 export default class CarsController {
   constructor() {
 
-    ProxyState.on('cars', _draw)
-    ProxyState.on('cars', () => { console.log('new car') })
+    ProxyState.on('house', _draw)
+    ProxyState.on('house', () => { console.log('new house') })
     _draw()
   }
 
   makeCar() {
     event.preventDefault()
     let form = event.target
-    let newCar = {
-      make: form.make.value,
-      model: form.model.value,
+    let newHouse = {
       year: form.year.value,
+      bed: form.bed.value,
+      bath: form.bath.value,
       price: form.price.value,
       description: form.description.value,
       imgUrl: form.imgUrl.value
     }
-    carsService.makeCar(newCar)
+    houseService.makeHouse(newHouse)
     form.reset()
   }
 }
