@@ -11,8 +11,8 @@ export default class Job {
   get Template() {
     return `
     <div class="col-md-6 col-sm-2">
-      <div class="car bg=light shadow">
-        <img src="${this.imgUrl}" class="w-100" alt="${this.position} ${this.location} car image">
+      <div class="job bg=light shadow">
+        <img src="${this.imgUrl}" class="w-100" alt="${this.position} ${this.location} job image">
           <div class="p-3">
             <div class="text-center">
               <p><b>${this.position} - ${this.location}</b></p>

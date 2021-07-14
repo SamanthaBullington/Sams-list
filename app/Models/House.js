@@ -10,8 +10,8 @@ export default class House {
   get Template() {
     return `
     <div class="col-md-6 col-sm-2">
-      <div class="car bg=light shadow">
-        <img src="${this.imgUrl}" class="w-100" alt="${this.year} ${this.price} car image">
+      <div class="house bg=light shadow">
+        <img src="${this.imgUrl}" class="w-100" alt="${this.year} ${this.price} house image">
           <div class="p-3">
             <div class="text-center">
               <p><b>${this.year} - ${this.bed} - ${this.bath} - ${this.bath}</b></p>
