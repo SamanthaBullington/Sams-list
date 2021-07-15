@@ -5,7 +5,7 @@ export default class Car {
     this.year = year
     this.price = price
     this.description = description || "No car description given"
-    this.imgURL = imgURL || 'placehold.it/100x100'
+    this.imgURL = imgURL || 'https://via.placeholder.com/150'
 
   }
 
@@ -13,7 +13,7 @@ export default class Car {
     return `
     <div class="col-md-6 col-sm-2">
       <div class="car bg=light shadow">
-        <img src="${this.imgUrl}" class="w-100" alt="${this.make} ${this.model} car image">
+        <img src="${this.imgURL}" class="w-100" alt="${this.make} ${this.model} car image">
           <div class="p-3">
             <div class="text-center">
               <p><b>${this.year} - ${this.make} - ${this.model}</b></p>

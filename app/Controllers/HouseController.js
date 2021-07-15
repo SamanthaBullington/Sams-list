@@ -26,7 +26,7 @@ export default class HouseController {
       bath: form.bath.value,
       price: form.price.value,
       description: form.description.value,
-      imgUrl: form.imgUrl.value
+      imgURL: form.imgURL.value
     }
     houseService.makeHouse(newHouse)
     form.reset()
